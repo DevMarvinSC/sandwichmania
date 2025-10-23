@@ -6,8 +6,12 @@ function Home(){
         <div className="HomeContainer">
             {headermenu()}
             <div>
-                Beta 1.1.0
-                Aquí va todo el contenido inicio
+                
+                <h1>
+                    Beta 1.2.0
+                    Aquí empieza la magia
+                </h1>
+                <span><b>Sitio en construcción</b></span>
             </div>
 
             {footergeneral()}

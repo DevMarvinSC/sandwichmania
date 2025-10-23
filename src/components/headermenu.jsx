@@ -1,49 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './headermenu.css';
 
 function headermenu(){
     return(
            
-        <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            
-            <a class="navbar-brand" href="/">
+        <nav className="navbar navbar-expand-lg fixed-top">
+        <div className="container">
+            <Link to="/" className='navbar-brand'>
                 <b>SandwichManía</b>
-            </a>
-            
-            
-            <button class="navbar-toggler" 
+            </Link>
+    
+            <button className="navbar-toggler" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" 
                     aria-expanded="false" 
                     aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span className="navbar-toggler-icon"></span>
             </button>
             
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Sandwiches">
-                            <i class="fa fa-utensils pe-2"></i>Sandwiches
-                        </a>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li className="nav-item">
+                        <Link to="/Sandwiches" className='nav-link text-dark text-decoration-none'>
+                            <i className="fas fa-utensils pe-2"></i>Sandwiches
+                        </Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#!">
-                            <i class="fas fa-child pe-2"></i>Menú Infantil
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/MenuInfantil" className='nav-link text-dark text-decoration-none'>
+                            <i className="fas fa-child pe-2"></i>Menú Infantil
+                        </Link>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Ensaladas">
-                            <i class="fas fa-leaf pe-2"></i>Ensaladas
-                        </a>
+                    <li className="nav-item">
+                        <Link to="/Ensaladas" className='nav-link text-dark text-decoration-none'>
+                            <i className="fas fa-leaf pe-2"></i>Ensaladas
+                        </Link>      
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/AcercaDe">
-                            <i class="fas fa-circle-info pe-2"></i>Sobre Nosotros
-                        </a>
+                    <li className="nav-item">
+                            <Link to="/AcercaDe" className='nav-link text-dark text-decoration-none'>
+                            <i className="fas fa-circle-info pe-2"></i>Sobre Nosotros
+                            </Link>
                     </li>
                 </ul>
             </div>

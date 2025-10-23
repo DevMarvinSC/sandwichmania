@@ -54,7 +54,7 @@ const AcercaDe = () => {
       id: 6,
       nombre: "Colin Espinosa",
       rol: "Team development",
-      descripcion: "UX(User Xperience)",
+      descripcion: "UX(User Experience)",
       avatar: avatarcolin
     }
     
@@ -67,7 +67,7 @@ const AcercaDe = () => {
         {headermenu()}
         <section className="mb-5">
           <div className="text-center mb-5">
-            <h1 className="display-4 fw-bold text-primary">Nuestro Equipo</h1>
+            <h1 className="display-4 fw-bold text-dark">Nuestro Equipo</h1>
             <p className="lead text-muted">Conoce a las personas detrás de SandwichManía</p>
           </div>
           <div className="row g-4 scrummaster">
