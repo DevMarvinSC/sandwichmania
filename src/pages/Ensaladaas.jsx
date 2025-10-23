@@ -1,3 +1,5 @@
+import React from "react";
+
 import headermenu from "../components/headermenu";
 import footergeneral from "../components/footergeneral";
 function Ensaladas(){
