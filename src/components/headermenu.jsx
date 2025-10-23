@@ -8,7 +8,7 @@ function headermenu(){
         <div class="container">
             
             <a class="navbar-brand" href="/">
-                SandwichManía
+                <b>SandwichManía</b>
             </a>
             
             
@@ -26,7 +26,7 @@ function headermenu(){
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">
+                        <a class="nav-link" href="/Sandwiches">
                             <i class="fa fa-utensils pe-2"></i>Sandwiches
                         </a>
                     </li>
@@ -36,12 +36,12 @@ function headermenu(){
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">
+                        <a class="nav-link" href="/Ensaladas">
                             <i class="fas fa-leaf pe-2"></i>Ensaladas
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">
+                        <a class="nav-link" href="/AcercaDe">
                             <i class="fas fa-circle-info pe-2"></i>Sobre Nosotros
                         </a>
                     </li>
