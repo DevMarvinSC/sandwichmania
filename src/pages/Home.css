@@ -1,6 +1,60 @@
 body{
     background-color: #fff6db;
 }
-h1{
-    padding-top: 150px;
+
+.imagenpinki{
+    width: 350px;
+}
+
+/* Home.css */
+.HomeContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #fff6db 0%, #fff6db 100%);
+}
+
+.services-section .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.testimonials-section .card {
+  transition: transform 0.3s ease;
+}
+
+.testimonials-section .card:hover {
+  transform: translateY(-3px);
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #212529 0%, #495057 100%);
+}
+
+/* Estilos para las estrellas */
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
