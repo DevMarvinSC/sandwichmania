@@ -1,4 +1,3 @@
-import './footergeneral.css'
 function footergeneral(){
 
     return(
@@ -8,12 +7,6 @@ function footergeneral(){
                     <div class="row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="d-flex align-items-center">
-                        <div class="bg-light rounded p-2 me-3">
-                            
-                            <div className="LOGO" >
-                            <span class="text-dark">LOGO</span>
-                            </div>
-                        </div>
                         <h3 class="h5 mb-0">SandwichManía</h3>
                         </div>
                     </div>

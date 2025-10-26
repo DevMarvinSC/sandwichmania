@@ -31,7 +31,7 @@ function headermenu(){
                     </li>
                     <li className="nav-item">
                         <Link to="/Sandwiches" className='nav-link text-dark text-decoration-none'>
-                            <i className="fas fa-utensils pe-2"></i>Sandwiches
+                            <i className="fas fa-utensils pe-2"></i>Sándwiches
                         </Link>
                     </li>
                     <li className="nav-item">

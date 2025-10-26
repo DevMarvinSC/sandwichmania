@@ -55,7 +55,14 @@ function Home() {
 
   // Función para navegar al menú
   const handleVerMenu = () => {
-    navigate('/sandwiches');
+    navigate('/Sandwiches');
+  };
+
+  const handleVerEnsaladas = () => {
+    navigate('/Ensaladas');
+  };
+  const handleVerMenuInfantil = () => {
+    navigate('/MenuInfantil');
   };
 
   return (
@@ -119,6 +126,7 @@ function Home() {
                     <li><i className="fas fa-check text-success me-2"></i>Pan artesanal diario</li>
                     <li><i className="fas fa-check text-success me-2"></i>Opciones personalizadas</li>
                   </ul>
+                  <button className='btnaccion btn btn-outline-light btn-lg text-dark' onClick={handleVerMenu}>Ver Sándwiches</button>
                 </div>
               </div>
             </div>
@@ -141,6 +149,7 @@ function Home() {
                     <li><i className="fas fa-check text-success me-2"></i>Opciones saludables</li>
                     <li><i className="fas fa-check text-success me-2"></i>Presentación divertida</li>
                   </ul>
+                  <button className='btnaccion btn btn-outline-light btn-lg text-dark' onClick={handleVerMenuInfantil}>Ver Menú Infantil</button>
                 </div>
               </div>
             </div>
@@ -163,6 +172,7 @@ function Home() {
                     <li><i className="fas fa-check text-success me-2"></i>Aderezos caseros</li>
                     <li><i className="fas fa-check text-success me-2"></i>Opciones proteicas</li>
                   </ul>
+                  <button className='btnaccion btn btn-outline-light btn-lg text-dark'onClick={handleVerEnsaladas}>Ver Ensaladas</button>
                 </div>
               </div>
             </div>

@@ -113,20 +113,11 @@ const AcercaDe = () => {
                 <h2 className="display-5 fw-bold mb-4">Nuestro Objetivo</h2>
                 <div className="text-start">
                   <p className="lead mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                  <p className="mb-4">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                    in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
-                    unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
-                  </p>
-                  <p className="mb-0">
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                    <b>Sandwichmanía</b> es mucho más que un sitio web; es un espacio dinámico e interactivo
+                    dedicado al universo de los sándwiches saludables. Nuestra misión es convertirse
+                    en el recurso de referencia para estudiantes, deportistas, nutriólogos y familias,
+                    demostrando que la alimentación práctica puede ser deliciosa, equilibrada y estar
+                    perfectamente adaptada a las necesidades específicas de cada estilo de vida.
                   </p>
                 </div>
               </div>

@@ -6,6 +6,10 @@ body{
     width: 350px;
 }
 
+.btnaccion{
+  background-color: #fbe39e;
+}
+
 /* Home.css */
 .HomeContainer {
   min-height: 100vh;

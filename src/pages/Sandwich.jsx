@@ -6,6 +6,15 @@ import './Sandwich.css';
 // Carrusel imágenes
 import twins from '../assets/img/Sandwich/Twins.png'
 import pinki from '../assets/img/Sandwich/Pinki.png'
+import huevo from '../assets/img/Sandwich/Sandwich de huevo.jpg'
+import polloaguacate from '../assets/img/Sandwich/Ensaladadepollo y aguacatejpg.jpg'
+import chivito from '../assets/img/Sandwich/Chivito.jpg'
+import garbanzos from '../assets/img/Sandwich/garbanzos.jpg'
+
+//Ofertas
+import atun from '../assets/img/Sandwich/Atun.jpg'
+import salmon from '../assets/img/Sandwich/salmonymanzanas.jpg'
+import quesos from '../assets/img/Sandwich/cuatroquesosysalsa.jpg'
 
 const Inicio = () => {
   // Estado para el carrusel
@@ -27,15 +36,15 @@ const Inicio = () => {
     },
     {
       id: 3,
-      nombre: "Sandwich 3",
-      imagen: " ",
-      descripcion: "Descripción"
+      nombre: "Sándwich de Huevo",
+      imagen: huevo,
+      descripcion: "Huevo, Aguacate, Tomates cherry, rúcula y queso."
     },
     {
       id: 4,
-      nombre: "Sandwich 4",
-      imagen: " ",
-      descripcion: "Descipción"
+      nombre: "Pollo y Aguacate",
+      imagen: polloaguacate,
+      descripcion: "Pechuga de pollo, aguacate, cebolla, mayonesa y aceite de oliva."
     }
   ];
 
@@ -46,42 +55,48 @@ const Inicio = () => {
       nombre: "Las Twins",
       imagen: twins,
       precio: 75.00,
-      descripcion: "Doble sandwich sencillo, tocino, jamón, queso americano, lechuga y jamón."
+      descripcion: "Doble sandwich sencillo, tocino, jamón, queso americano, lechuga y jamón.",
+      creditos: "SandwichManía"
     },
     {
       id: 2,
       nombre: "La Magnificarne",
       imagen: pinki,
       precio: 45.50,
-      descripcion: "Jamón, tocino, queso americano, lechuga, jamón, jalapeño, jitomate y aceitunas "
+      descripcion: "Jamón, tocino, queso americano, lechuga, jamón, jalapeño, jitomate y aceitunas.",
+      creditos: "SándwichManía"
     },
     {
       id: 3,
-      nombre: "Sandwich 3",
-      imagen: "",
-      precio: 0.00,
-      descripcion: "Descripción"
+      nombre: "Sándwich de Huevo",
+      imagen: huevo,
+      precio: 24.99,
+      descripcion: "Huevo, Aguacate, Tomates cherry, rúcula y queso.",
+      creditos: "Gourmet.cl"
     },
     {
       id: 4,
-      nombre: "Sandwich 4",
-      imagen: "",
-      precio: 0.00,
-      descripcion: "Descripción"
+      nombre: "Pollo y aguacate",
+      imagen: polloaguacate,
+      precio: 39.99,
+      descripcion: "Pechuga de pollo, aguacate, cebolla, mayonesa y aceite de oliva.",
+      creditos: "Philippe Saez -  Directo al paladar"
     },
     {
       id: 5,
-      nombre: "Sandwich 5",
-      imagen: "",
-      precio: 0.00,
-      descripcion: "Descripción"
+      nombre: "Chivito",
+      imagen: chivito,
+      precio: 44.99,
+      descripcion: "Sándwich de Uruguay, Pan tipo chapata, filete de ternera, tomate, lechuga, aceitunas, jamón y huevo.",
+      creditos: "Pakus - Directo al paladar"
     },
     {
       id: 6,
-      nombre: "Sandwich 6",
-      imagen: "",
-      precio: 0.00,
-      descripcion: "Descripción"
+      nombre: "Sándwich Ensalada de Garbanzos",
+      imagen: garbanzos,
+      precio: 19.99,
+      descripcion: "Garbanzos, zanahoria, cebolleta, apio, yogurt, limón, repollo y pimienta.",
+      creditos:"Liliana Fuchs - Directo al Paladar"
     }
   ];
 
@@ -89,27 +104,30 @@ const Inicio = () => {
   const promociones = [
     {
       id: 1,
-      nombre: "Promo 1",
-      imagen: "",
-      precioOriginal: 0.00,
-      precioPromocion: 0.00,
-      descripcion: "Descripción"
+      nombre: "Sándwich de Atún",
+      imagen: atun,
+      precioOriginal: 21.90,
+      precioPromocion: 16.49,
+      descripcion: "Un clásico: Atún, mayonesa, cilantro, cebolla morada, pimiento rojo, limón.",
+      creditos: "Miguel Ayuso - Directo al paladar"
     },
     {
       id: 2,
-      nombre: "Promo 2",
-      imagen: "",
-      precioOriginal: 0.00,
-      precioPromocion: 0.00,
-      descripcion: "Descripción"
+      nombre: "Salmón y Manzana",
+      imagen: salmon,
+      precioOriginal: 29.90,
+      precioPromocion: 17.90,
+      descripcion: "Pan integral, salmón, aguacate, queso crema, tomates cherry, manzanas, limón y germinado de alfalfa.",
+      creditos: "tipsdemadre.com"
     },
     {
       id: 3,
-      nombre: "Promo 3",
-      imagen: "",
-      precioOriginal: 0.00,
-      precioPromocion: 0.00,
-      descripcion: ""
+      nombre: "4 Quesos y Salsa BBQ",
+      imagen: quesos,
+      precioOriginal: 38.90,
+      precioPromocion: 30.00,
+      descripcion: "Quesos: parmesano, cheddar, gruyer y mozarela",
+      creditos: "tipsdemadre.com"
     }
   ];
 
@@ -132,15 +150,15 @@ const Inicio = () => {
       
       <section className="Banner text-white py-5">
         <div className="container text-center">
-          <h1 className="display-2 fw-bold mb-3 text-black">Nuestros Sandwiches</h1>
-          <p className="lead text-black fw-bold">Los mejores sandwiches artesanales hechos con ingredientes frescos</p>
+          <h1 className="display-2 fw-bold mb-3 text-black">Nuestros Sándwiches</h1>
+          <p className="lead text-black fw-bold">Los mejores sá ndwiches artesanales hechos con ingredientes frescos</p>
         </div>
       </section>
 
       {/* Carrusel de Sandwiches Recientes */}
       <section className="py-5">
         <div className="container">
-          <h2 className="text-center mb-4 fw-bold">Sandwiches Recién Agregados</h2>
+          <h2 className="text-center mb-4 fw-bold">Sándwiches Recién Agregados</h2>
           
           <div className="row justify-content-center">
             <div className="col-lg-10">
@@ -222,7 +240,7 @@ const Inicio = () => {
                     <p className="card-text text-muted flex-grow-1">{sandwich.descripcion}</p>
                     <div className="d-flex justify-content-between align-items-center mt-auto">
                       <span className="h5 text-primary mb-0">${sandwich.precio.toFixed(2)}</span>
-                      
+                      <small>Creditos: {sandwich.creditos}</small>
                     </div>
                   </div>
                 </div>
@@ -264,6 +282,7 @@ const Inicio = () => {
                           ${promo.precioPromocion.toFixed(2)}
                         </span>
                       </div>
+                      <small>Creditos: {promo.creditos}</small>
                       
                     </div>
                   </div>
