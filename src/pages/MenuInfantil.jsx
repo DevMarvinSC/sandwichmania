@@ -62,7 +62,7 @@ const MenuInfantil = () => {
     }
   ];
 
-  // Acompañamientos y postres
+  /* Acompañamientos y postres
   const acompanamientos = [
     {
       id: 5,
@@ -101,6 +101,7 @@ const MenuInfantil = () => {
       edadRecomendada: "2-10 años"
     }
   ];
+  */
 
   return (
     <div className="container-fluid p-0">
