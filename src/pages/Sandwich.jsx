@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import headermenu from '../components/headermenu';
 import footergeneral from '../components/footergeneral';
+import { useCarrito } from '../components/CarritoContext';
 import './Sandwich.css';
 
 // Carrusel imágenes
@@ -17,6 +18,14 @@ import salmon from '../assets/img/Sandwich/salmonymanzanas.jpg'
 import quesos from '../assets/img/Sandwich/cuatroquesosysalsa.jpg'
 
 const Inicio = () => {
+  const { agregarProducto } = useCarrito();
+
+  const handleAgregarAlCarrito = (producto) => {
+    agregarProducto(producto);
+    // Opcional: mostrar notificación
+    alert(`${producto.nombre} agregado al carrito!`);
+  };
+
   // Estado para el carrusel
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -96,7 +105,7 @@ const Inicio = () => {
       imagen: garbanzos,
       precio: 19.99,
       descripcion: "Garbanzos, zanahoria, cebolleta, apio, yogurt, limón, repollo y pimienta.",
-      creditos:"Liliana Fuchs - Directo al Paladar"
+      creditos: "Liliana Fuchs - Directo al Paladar"
     }
   ];
 
@@ -146,12 +155,12 @@ const Inicio = () => {
 
   return (
     <div className="container-fluid p-0">
-        {headermenu()}
-      
+      {headermenu()}
+
       <section className="Banner text-white py-5">
         <div className="container text-center">
           <h1 className="display-2 fw-bold mb-3 text-black">Nuestros Sándwiches</h1>
-          <p className="lead text-black fw-bold">Los mejores sá ndwiches artesanales hechos con ingredientes frescos</p>
+          <p className="lead text-black fw-bold">Los mejores sándwiches artesanales hechos con ingredientes frescos</p>
         </div>
       </section>
 
@@ -159,7 +168,7 @@ const Inicio = () => {
       <section className="py-5">
         <div className="container">
           <h2 className="text-center mb-4 fw-bold">Sándwiches Recién Agregados</h2>
-          
+
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div id="carouselSandwiches" className="carousel slide" data-bs-ride="carousel">
@@ -177,16 +186,16 @@ const Inicio = () => {
                     ></button>
                   ))}
                 </div>
-                
+
                 <div className="carousel-inner rounded-3">
                   {sandwichesRecientes.map((sandwich, index) => (
-                    <div 
-                      key={sandwich.id} 
+                    <div
+                      key={sandwich.id}
                       className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
                     >
-                      <img 
-                        src={sandwich.imagen} 
-                        className="d-block w-100" 
+                      <img
+                        src={sandwich.imagen}
+                        className="d-block w-100"
                         alt={sandwich.nombre}
                         style={{ height: '400px', objectFit: 'cover' }}
                       />
@@ -197,18 +206,18 @@ const Inicio = () => {
                     </div>
                   ))}
                 </div>
-                
-                <button 
-                  className="carousel-control-prev" 
-                  type="button" 
+
+                <button
+                  className="carousel-control-prev"
+                  type="button"
                   onClick={handlePrev}
                 >
                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span className="visually-hidden">Previous</span>
                 </button>
-                <button 
-                  className="carousel-control-next" 
-                  type="button" 
+                <button
+                  className="carousel-control-next"
+                  type="button"
                   onClick={handleNext}
                 >
                   <span className="carousel-control-next-icon" aria-hidden="true"></span>
@@ -224,14 +233,14 @@ const Inicio = () => {
       <section className="py-5 bg-light">
         <div className="container">
           <h2 className="text-center mb-5 fw-bold">Nuestro Menú</h2>
-          
+
           <div className="row g-4">
             {menuSandwiches.map(sandwich => (
               <div key={sandwich.id} className="col-md-6 col-lg-4">
                 <div className="card h-100 shadow-sm border-0">
-                  <img 
-                    src={sandwich.imagen} 
-                    className="card-img-top" 
+                  <img
+                    src={sandwich.imagen}
+                    className="card-img-top"
                     alt={sandwich.nombre}
                     style={{ height: '200px', objectFit: 'cover' }}
                   />
@@ -240,8 +249,15 @@ const Inicio = () => {
                     <p className="card-text text-muted flex-grow-1">{sandwich.descripcion}</p>
                     <div className="d-flex justify-content-between align-items-center mt-auto">
                       <span className="h5 text-primary mb-0">${sandwich.precio.toFixed(2)}</span>
-                      <small>Creditos: {sandwich.creditos}</small>
+                      <button
+                        className="btn btn-primary btn-sm"
+                        onClick={() => handleAgregarAlCarrito(sandwich)}
+                      >
+                        <i className="fas fa-cart-plus me-1"></i>
+                        Agregar
+                      </button>
                     </div>
+                    <small className="text-muted mt-2">Creditos: {sandwich.creditos}</small>
                   </div>
                 </div>
               </div>
@@ -254,15 +270,15 @@ const Inicio = () => {
       <section className="py-5">
         <div className="container">
           <h2 className="text-center mb-5 fw-bold text-danger">Promociones Especiales</h2>
-          
+
           <div className="row g-4">
             {promociones.map(promo => (
               <div key={promo.id} className="col-md-6 col-lg-4">
                 <div className="card h-100 shadow border-2 border-danger">
                   <div className="position-relative">
-                    <img 
-                      src={promo.imagen} 
-                      className="card-img-top" 
+                    <img
+                      src={promo.imagen}
+                      className="card-img-top"
                       alt={promo.nombre}
                       style={{ height: '200px', objectFit: 'cover' }}
                     />
@@ -282,9 +298,18 @@ const Inicio = () => {
                           ${promo.precioPromocion.toFixed(2)}
                         </span>
                       </div>
-                      <small>Creditos: {promo.creditos}</small>
-                      
+                      <button
+                        className="btn btn-danger btn-sm"
+                        onClick={() => handleAgregarAlCarrito({
+                          ...promo,
+                          precio: promo.precioPromocion // Usar precio de promoción
+                        })}
+                      >
+                        <i className="fas fa-cart-plus me-1"></i>
+                        Agregar
+                      </button>
                     </div>
+                    <small>Creditos: {promo.creditos}</small>
                   </div>
                 </div>
               </div>

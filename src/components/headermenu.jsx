@@ -40,11 +40,6 @@ function headermenu(){
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Ensaladas" className='nav-link text-dark text-decoration-none'>
-                            <i className="fas fa-leaf pe-2"></i>Ensaladas
-                        </Link>      
-                    </li>
-                    <li className="nav-item">
                             <Link to="/AcercaDe" className='nav-link text-dark text-decoration-none'>
                             <i className="fas fa-circle-info pe-2"></i>Sobre Nosotros
                             </Link>

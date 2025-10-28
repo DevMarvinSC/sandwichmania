@@ -88,7 +88,7 @@ const AcercaDe = () => {
 
           <div className="row g-3">
             {integrantes.map(integrante => (
-              <div key={integrante.id} className="col-md-6 col-lg-3">
+              <div key={integrante.id} className="col-md-5 col-lg-2">
                 <div className="card h-100 shadow-sm border-0">
                   <div className="card-body text-center p-4">
                     <div className="mb-3 Avatar">
