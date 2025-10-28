@@ -1,0 +1,46 @@
+.banner-infantil {
+    background-color: #fbe39d;
+    color: white;
+}
+
+.banner-infantil .feature-item {
+  padding: 15px;
+}
+
+.banner-infantil .feature-item i {
+  color: white;
+}
+
+.banner-infantil .feature-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Estilos para los badges de edad */
+.badge-edad {
+  background-color: #6bcf7f;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-infantil h1 {
+    font-size: 2.5rem;
+  }
+  
+  .banner-infantil .feature-item {
+    margin-bottom: 20px;
+  }
+}

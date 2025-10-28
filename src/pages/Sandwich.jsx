@@ -22,8 +22,6 @@ const Inicio = () => {
 
   const handleAgregarAlCarrito = (producto) => {
     agregarProducto(producto);
-    // Opcional: mostrar notificación
-    alert(`${producto.nombre} agregado al carrito!`);
   };
 
   // Estado para el carrusel
