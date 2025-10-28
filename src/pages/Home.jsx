@@ -16,28 +16,28 @@ function Home() {
       nombre: "María González",
       estrellas: 5,
       opinion: "Los mejores sandwiches que he probado. Ingredientes siempre frescos y el pan artesanal es increíble.",
-      fecha: "15 Nov 2024"
+      fecha: "29 Oct 2025"
     },
     {
       id: 2,
       nombre: "Carlos Rodríguez",
       estrellas: 4,
       opinion: "Excelente servicio y calidad. El menú para niños es perfecto para mis hijos.",
-      fecha: "2 Dic 2024"
+      fecha: "29 Oct 2025"
     },
     {
       id: 3,
       nombre: "Ana Martínez",
       estrellas: 5,
       opinion: "Las ensaladas son deliciosas y frescas. Perfectas para un almuerzo saludable.",
-      fecha: "8 Ene 2025"
+      fecha: "29 Oct 2025"
     },
     {
       id: 4,
       nombre: "Javier López",
       estrellas: 5,
-      opinion: "La combinación de sabores en sus sandwiches es única. ¡Mi lugar favorito!",
-      fecha: "20 Ene 2025"
+      opinion: "La combinación de sabores en sus sandwiches es única.",
+      fecha: "29 Oct 2025"
     }
   ];
 
@@ -58,9 +58,7 @@ function Home() {
     navigate('/Sandwiches');
   };
 
-  const handleVerEnsaladas = () => {
-    navigate('/Ensaladas');
-  };
+  
   const handleVerMenuInfantil = () => {
     navigate('/MenuInfantil');
   };
@@ -109,7 +107,7 @@ function Home() {
           
           <div className="row g-4">
             {/* Sandwiches */}
-            <div className="col-md-4">
+            <div className="col-md-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body text-center p-4">
                   <div className="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
@@ -132,7 +130,7 @@ function Home() {
             </div>
 
             {/* Menú para Niños */}
-            <div className="col-md-4">
+            <div className="col-md-6">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body text-center p-4">
                   <div className="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
@@ -150,29 +148,6 @@ function Home() {
                     <li><i className="fas fa-check text-success me-2"></i>Presentación divertida</li>
                   </ul>
                   <button className='btnaccion btn btn-outline-light btn-lg text-dark' onClick={handleVerMenuInfantil}>Ver Menú Infantil</button>
-                </div>
-              </div>
-            </div>
-
-            {/* Ensaladas */}
-            <div className="col-md-4">
-              <div className="card h-100 border-0 shadow-sm">
-                <div className="card-body text-center p-4">
-                  <div className="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                       style={{width: '80px', height: '80px'}}>
-                    <i className="fas fa-leaf text-info fs-2"></i>
-                  </div>
-                  <h4 className="fw-bold text-dark">Ensaladas Frescas</h4>
-                  <p className="text-muted">
-                    Ensaladas preparadas al momento con vegetales frescos y aderezos 
-                    caseros. Perfectas para una comida ligera y saludable.
-                  </p>
-                  <ul className="list-unstyled text-start">
-                    <li><i className="fas fa-check text-success me-2"></i>Vegetales frescos</li>
-                    <li><i className="fas fa-check text-success me-2"></i>Aderezos caseros</li>
-                    <li><i className="fas fa-check text-success me-2"></i>Opciones proteicas</li>
-                  </ul>
-                  <button className='btnaccion btn btn-outline-light btn-lg text-dark'onClick={handleVerEnsaladas}>Ver Ensaladas</button>
                 </div>
               </div>
             </div>
