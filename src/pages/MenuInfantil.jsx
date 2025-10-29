@@ -29,7 +29,6 @@ const MenuInfantil = () => {
 
   const handleAgregarAlCarrito = (producto) => {
     agregarProducto(producto);
-    alert(`¡${producto.nombre} agregado al carrito!`);
   };
 
   // Menú principal para niños
