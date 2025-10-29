@@ -2,6 +2,11 @@ footer {
     text-align: center;
 }
 
+.logo{
+    height: 30px;
+    width: auto;
+}
+
 .navbar{
     background-color: #fbe39e;
 }

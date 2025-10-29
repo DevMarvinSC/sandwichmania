@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import headermenu from '../components/headermenu';
 import footergeneral from '../components/footergeneral';
 import { useCarrito } from '../components/CarritoContext';
@@ -18,6 +19,15 @@ import salmon from '../assets/img/Sandwich/salmonymanzanas.jpg'
 import quesos from '../assets/img/Sandwich/cuatroquesosysalsa.jpg'
 
 const Inicio = () => {
+
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant'
+        });
+      }, []);
+
   const { agregarProducto } = useCarrito();
 
   const handleAgregarAlCarrito = (producto) => {

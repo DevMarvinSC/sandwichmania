@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Headermenu from "../components/headermenu";
 import Footergeneral from "../components/footergeneral";
@@ -7,6 +8,14 @@ import './Home.css';
 import pinki from '../assets/img/Sandwich/Pinki.png'
 
 function Home() {
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant'
+        });
+      }, []);
+
   const navigate = useNavigate();
 
   // Datos de opiniones de usuarios

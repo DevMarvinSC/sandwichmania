@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { useCarrito } from '../components/CarritoContext';
 import { useNavigate } from 'react-router-dom';
 import headermenu from './headermenu';
 import footergeneral from './footergeneral';
 
 const Checkout = () => {
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'instant'
+        });
+      }, []);
+
   const { carrito, total, vaciarCarrito } = useCarrito();
   const navigate = useNavigate();
   
@@ -101,7 +110,7 @@ const Checkout = () => {
         {headermenu()}
         <div className="row justify-content-center">
           <div className="col-md-6 text-center">
-            <i className="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+            <i className="fas fa-shopping-cart fa-3x text-muted mb-3 p-5"></i>
             <h3>Tu carrito está vacío</h3>
             <p>Agrega algunos productos antes de proceder al checkout</p>
             <button 

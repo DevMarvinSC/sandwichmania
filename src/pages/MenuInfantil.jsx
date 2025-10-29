@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import headermenu from '../components/headermenu';
 import footergeneral from '../components/footergeneral';
 import { useCarrito } from '../components/CarritoContext';
@@ -15,6 +16,15 @@ import queso from '../assets/img/MenuInfantil/Queso fundido.webp';
 
 
 const MenuInfantil = () => {
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+  }, []);
+
   const { agregarProducto } = useCarrito();
 
   const handleAgregarAlCarrito = (producto) => {
@@ -62,46 +72,6 @@ const MenuInfantil = () => {
     }
   ];
 
-  /* Acompañamientos y postres
-  const acompanamientos = [
-    {
-      id: 5,
-      nombre: "Fruta Divertida",
-      imagen: "",
-      precio: 15.00,
-      descripcion: "Mezcla de frutas frescas cortadas en formas divertidas. Sin azúcar añadida.",
-      incluye: "Manzana, uvas, fresas, melón, sandía",
-      edadRecomendada: "Todas las edades"
-    },
-    {
-      id: 6,
-      nombre: "Yogurt con Cereal",
-      imagen: "",
-      precio: 18.00,
-      descripcion: "Yogurt natural con cereal crujiente y miel. Opción saludable y deliciosa.",
-      incluye: "Yogurt, cereal, miel, frutos rojos",
-      edadRecomendada: "2-12 años"
-    },
-    {
-      id: 7,
-      nombre: "Jugo Natural",
-      imagen: "",
-      precio: 12.00,
-      descripcion: "Jugo 100% natural de naranja o manzana. Sin conservadores ni azúcar añadida.",
-      incluye: "Vaso de 250ml",
-      edadRecomendada: "Todas las edades"
-    },
-    {
-      id: 8,
-      nombre: "Gelatina Colorida",
-      imagen: "",
-      precio: 10.00,
-      descripcion: "Gelatina de sabores con fruta natural. Presentación divertida y colorida.",
-      incluye: "Gelatina, fruta natural, crema batida",
-      edadRecomendada: "2-10 años"
-    }
-  ];
-  */
 
   return (
     <div className="container-fluid p-0">
@@ -160,53 +130,6 @@ const MenuInfantil = () => {
           </div>
         </div>
       </section>
-
-      {/* Acompañamientos y Postres 
-
-      <section className="py-5">
-        <div className="container">
-          <h2 className="text-center mb-5 fw-bold text-success">Acompañamientos y Postres</h2>
-          <p className="text-center text-muted mb-4">Complementos perfectos para una comida balanceada</p>
-          
-          <div className="row g-4">
-            {acompanamientos.map(acompanamiento => (
-              <div key={acompanamiento.id} className="col-md-6 col-lg-3">
-                <div className="card h-100 shadow-sm border-0">
-                  <img
-                    src={acompanamiento.imagen}
-                    className="card-img-top"
-                    alt={acompanamiento.nombre}
-                    style={{ height: '200px', objectFit: 'cover' }}
-                  />
-                  <div className="card-body d-flex flex-column">
-                    <h5 className="card-title fw-bold text-dark">{acompanamiento.nombre}</h5>
-                    <p className="card-text text-muted flex-grow-1">{acompanamiento.descripcion}</p>
-                    
-                    <div className="mb-2">
-                      <small className="text-primary">
-                        <i className="fas fa-info-circle me-1"></i>
-                        {acompanamiento.incluye}
-                      </small>
-                    </div>
-                    
-                    <div className="d-flex justify-content-between align-items-center mt-auto">
-                      <span className="h5 text-success mb-0">${acompanamiento.precio.toFixed(2)}</span>
-                      <button
-                        className="btn btn-success btn-sm"
-                        onClick={() => handleAgregarAlCarrito(acompanamiento)}
-                      >
-                        <i className="fas fa-cart-plus me-1"></i>
-                        Agregar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
 
 
       {/* Información Nutricional */}

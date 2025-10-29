@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import headermenu from '../components/headermenu';
 import footergeneral from '../components/footergeneral';
 //Images
@@ -11,6 +12,14 @@ import avatarisrael from '../assets/img/AcercaDe/Israel.jpg'
 import './AcercaDeNosotros.css';
 
 const AcercaDe = () => {
+  useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    }, []);
+
   const scrummaster =
   {
     nombre: "Dr. Laura Vital Turrubiates",
